@@ -121,7 +121,7 @@ if (config.runsInWidget || (testMode && fileExists && !resetWidget)) {
     formatText(dateNumber, dateSize)
   } else {
     df.dateFormat = dateDisplay
-    let dateText = widget.addText(df.string(date))
+    let dateText = widget.addText("Today is " + df.string(date) + "th.")
     formatText(dateText, dateSize)
   }
 
@@ -295,15 +295,15 @@ hStack.centerAlignContent();
 function makeGreeting() {
   let greeting = "Good "
   if (date.getHours() < 6) {
-    greeting = greeting + "Night, " + greetingName
+    greeting = greeting + "Night, " + greetingName + "."
   } else if (date.getHours() < 12) {
-    greeting = greeting + "Morning, " + greetingName
+    greeting = greeting + "Morning, " + greetingName + "."
   } else if (date.getHours() < 17) {
-    greeting = greeting + "Afternoon, " + greetingName
+    greeting = greeting + "Afternoon, " + greetingName + "."
   } else if (date.getHours() < 21) {
-    greeting = greeting + "Evening, " + greetingName
+    greeting = greeting + "Evening, " + greetingName + "."
   } else {
-    greeting = greeting + "Night, " + greetingName
+    greeting = greeting + "Night, " + greetingName + "."
   }
   return greeting
 }
