@@ -164,7 +164,7 @@ hStack.centerAlignContent();
           // Add the tomorrow label prior to the first tomorrow event.
           if (!multipleTomorrowEvents) {
             widget.addSpacer(elementSpacing)
-            let tomorrowText = widget.addText("TOMORROW")
+            let tomorrowText = widget.addText(" --- Tomorrow's Events --- ")
             formatText(tomorrowText, eventTitleSize)
             multipleTomorrowEvents = true
           }
