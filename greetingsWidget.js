@@ -18,6 +18,9 @@ const widgetPreview = "large"
 // Optionally show a greeting based on the time of day.
 const showGreeting = true
 
+// Adds your name to the main greeting.
+const greetingName = "Josh"
+
 // Choose the date style. "iOS" matches the default calendar app (like: THURSDAY 29)
 // Or, use docs.scriptable.app/dateformatter to write your own format.
 
@@ -292,15 +295,15 @@ hStack.centerAlignContent();
 function makeGreeting() {
   let greeting = "Good "
   if (date.getHours() < 6) {
-    greeting = greeting + "Night"
+    greeting = greeting + "Night, " + greetingName
   } else if (date.getHours() < 12) {
-    greeting = greeting + "Morning"
+    greeting = greeting + "Morning, " + greetingName
   } else if (date.getHours() < 17) {
-    greeting = greeting + "Afternoon"
+    greeting = greeting + "Afternoon, " + greetingName
   } else if (date.getHours() < 21) {
-    greeting = greeting + "Evening"
+    greeting = greeting + "Evening, " + greetingName
   } else {
-    greeting = greeting + "Night"
+    greeting = greeting + "Night, " + greetingName
   }
   return greeting
 }
